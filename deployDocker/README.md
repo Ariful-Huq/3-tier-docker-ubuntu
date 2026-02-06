@@ -487,3 +487,14 @@ docker logs -f postgres-db
 **Need help?** Check [MANUAL_DEPLOYMENT.md](MANUAL_DEPLOYMENT.md) for detailed instructions or [HTTPS_SETUP.md](HTTPS_SETUP.md) for SSL configuration.
 
 **Repository:** https://github.com/sarowar-alam/3-tier-docker-ubuntu
+
+---
+
+## 🧑‍💻 Author
+
+**Md. Sarowar Alam**  
+Lead DevOps Engineer, Hogarth Worldwide  
+📧 Email: sarowar@hotmail.com  
+🔗 LinkedIn: [linkedin.com/in/sarowar](https://www.linkedin.com/in/sarowar/)
+
+---

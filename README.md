@@ -398,25 +398,6 @@ cd frontend
 docker build -t bmi-frontend:latest .
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature-name`
-3. Commit changes: `git commit -am 'Add feature'`
-4. Push to branch: `git push origin feature-name`
-5. Submit pull request
-
-## 📄 License
-
-This project is open source and available for educational purposes.
-
-## 🙏 Acknowledgments
-
-- Let's Encrypt for free SSL certificates
-- Docker for containerization platform
-- AWS for cloud infrastructure
-- React, Express, and PostgreSQL communities
-
 ## 📞 Support
 
 - **GitHub Repository**: https://github.com/sarowar-alam/3-tier-docker-ubuntu
@@ -425,6 +406,13 @@ This project is open source and available for educational purposes.
 
 ---
 
-**Built with ❤️ for learning Docker, AWS, and full-stack development**
+## 🧑‍💻 Author
+
+**Md. Sarowar Alam**  
+Lead DevOps Engineer, Hogarth Worldwide  
+📧 Email: sarowar@hotmail.com  
+🔗 LinkedIn: [linkedin.com/in/sarowar](https://www.linkedin.com/in/sarowar/)
+
+---
 
 **Live URL (once deployed):** https://bmi.ostaddevops.click

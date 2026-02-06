@@ -655,3 +655,14 @@ curl -I https://bmi.ostaddevops.click
 Your BMI Health Tracker is now secured with SSL/TLS encryption via AWS Application Load Balancer and Let's Encrypt certificates.
 
 Access your application at: **https://bmi.ostaddevops.click**
+
+---
+
+## 🧑‍💻 Author
+
+**Md. Sarowar Alam**  
+Lead DevOps Engineer, Hogarth Worldwide  
+📧 Email: sarowar@hotmail.com  
+🔗 LinkedIn: [linkedin.com/in/sarowar](https://www.linkedin.com/in/sarowar/)
+
+---

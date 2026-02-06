@@ -163,7 +163,7 @@ docker volume ls | grep postgres-data
 ### Step 9: Start PostgreSQL Database Container
 
 ```bash
-cd ~/3-tier-with-docker
+cd ~/3-tier-docker-ubuntu
 
 docker run -d \
   --name postgres-db \
@@ -226,7 +226,7 @@ docker exec postgres-db psql -U bmi_user -d bmi_health_db -c "\d measurements"
 ### Step 12: Build Backend Docker Image
 
 ```bash
-cd ~/3-tier-with-docker/backend
+cd ~/3-tier-docker-ubuntu/backend
 
 docker build -t bmi-backend:latest .
 ```
@@ -282,7 +282,7 @@ docker exec backend-api wget -q -O- http://localhost:3000/health
 ### Step 15: Build Frontend Docker Image
 
 ```bash
-cd ~/3-tier-with-docker/frontend
+cd ~/3-tier-docker-ubuntu/frontend
 
 docker build -t bmi-frontend:latest .
 ```
@@ -612,3 +612,14 @@ For issues or questions:
 **Deployment Complete!** 🎉
 
 Your BMI Health Tracker is now running in Docker containers on AWS EC2 with persistent data storage.
+
+---
+
+## 🧑‍💻 Author
+
+**Md. Sarowar Alam**  
+Lead DevOps Engineer, Hogarth Worldwide  
+📧 Email: sarowar@hotmail.com  
+🔗 LinkedIn: [linkedin.com/in/sarowar](https://www.linkedin.com/in/sarowar/)
+
+---
