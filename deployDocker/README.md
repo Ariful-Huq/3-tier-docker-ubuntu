@@ -9,7 +9,7 @@ Complete deployment guide for BMI Health Tracker on AWS EC2 Ubuntu using pure Do
 ```bash
 # Clone repository
 git clone https://github.com/sarowar-alam/3-tier-docker-ubuntu.git
-cd 3-tier-docker-ubuntu/deploy
+cd 3-tier-docker-ubuntu/deployDocker
 
 # Run full automated deployment
 chmod +x full-deploy.sh
@@ -327,7 +327,7 @@ docker system df -v
 crontab -e
 
 # Add daily backup at 2 AM
-0 2 * * * /home/ubuntu/3-tier-with-docker/deploy/backup-database.sh
+0 2 * * * /home/ubuntu/3-tier-docker-ubuntu/deployDocker/backup-database.sh
 ```
 
 **Manual backup:**
@@ -436,7 +436,7 @@ docker stats backend-api
 
 - Container logs: `docker logs <container-name>`
 - Deployment logs: Terminal output during deployment
-- Database backups: `deploy/backups/`
+- Database backups: `deployDocker/backups/`
 
 ### Debug Mode
 

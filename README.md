@@ -86,7 +86,7 @@ ssh -i your-key.pem ubuntu@<EC2-PUBLIC-IP>
 
 # Clone repository
 git clone https://github.com/sarowar-alam/3-tier-docker-ubuntu.git
-cd 3-tier-docker-ubuntu/deploy
+cd 3-tier-docker-ubuntu/deployDocker
 
 # Run automated deployment
 chmod +x full-deploy.sh
@@ -103,7 +103,7 @@ Access your application at: `http://<EC2-PUBLIC-IP>`
 
 ### Manual Deployment
 
-See detailed step-by-step instructions: [deploy/MANUAL_DEPLOYMENT.md](deploy/MANUAL_DEPLOYMENT.md)
+See detailed step-by-step instructions: [deployDocker/MANUAL_DEPLOYMENT.md](deployDocker/MANUAL_DEPLOYMENT.md)
 
 ## 📁 Project Structure
 
@@ -139,7 +139,7 @@ See detailed step-by-step instructions: [deploy/MANUAL_DEPLOYMENT.md](deploy/MAN
 │           └── TrendChart.jsx
 ├── database/
 │   └── setup-database.sh       # Legacy setup (not used in Docker)
-└── deploy/                     # 🚀 Docker deployment files
+└── deployDocker/               # 🚀 Docker deployment files
     ├── README.md               # Deployment documentation
     ├── MANUAL_DEPLOYMENT.md    # Step-by-step manual guide
     ├── HTTPS_SETUP.md          # SSL/TLS configuration guide
@@ -159,7 +159,7 @@ See detailed step-by-step instructions: [deploy/MANUAL_DEPLOYMENT.md](deploy/MAN
 
 ### Environment Variables
 
-Create `deploy/.env` from `deploy/.env.example`:
+Create `deployDocker/.env` from `deployDocker/.env.example`:
 
 ```bash
 # Database
@@ -190,18 +190,18 @@ VOLUME_NAME=postgres-data
 | HTTP | 80 | 0.0.0.0/0 | Public access |
 | SSH | 22 | Your IP | Management |
 
-For HTTPS with ALB, see [deploy/HTTPS_SETUP.md](deploy/HTTPS_SETUP.md)
+For HTTPS with ALB, see [deployDocker/HTTPS_SETUP.md](deployDocker/HTTPS_SETUP.md)
 
 ## 📚 Documentation
 
-- **[Deployment Guide](deploy/README.md)** - Complete deployment documentation
-- **[Manual Deployment](deploy/MANUAL_DEPLOYMENT.md)** - Step-by-step manual instructions
-- **[HTTPS Setup](deploy/HTTPS_SETUP.md)** - SSL/TLS with Certbot, ACM, and ELB
+- **[Deployment Guide](deployDocker/README.md)** - Complete deployment documentation
+- **[Manual Deployment](deployDocker/MANUAL_DEPLOYMENT.md)** - Step-by-step manual instructions
+- **[HTTPS Setup](deployDocker/HTTPS_SETUP.md)** - SSL/TLS with Certbot, ACM, and ELB
 
 ## 🛠️ Management Commands
 
 ```bash
-cd deploy
+cd deployDocker
 
 # View logs
 ./logs.sh
@@ -228,7 +228,7 @@ Enable HTTPS with Let's Encrypt and AWS ALB:
 3. Configure Application Load Balancer
 4. Update Route53 DNS
 
-**Full guide:** [deploy/HTTPS_SETUP.md](deploy/HTTPS_SETUP.md)
+**Full guide:** [deployDocker/HTTPS_SETUP.md](deployDocker/HTTPS_SETUP.md)
 
 **Domain:** bmi.ostaddevops.click
 
@@ -306,7 +306,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-**More troubleshooting:** [deploy/MANUAL_DEPLOYMENT.md](deploy/MANUAL_DEPLOYMENT.md)
+**More troubleshooting:** [deployDocker/MANUAL_DEPLOYMENT.md](deployDocker/MANUAL_DEPLOYMENT.md)
 
 ## 🔄 Data Persistence
 
@@ -420,7 +420,7 @@ This project is open source and available for educational purposes.
 ## 📞 Support
 
 - **GitHub Repository**: https://github.com/sarowar-alam/3-tier-docker-ubuntu
-- **Documentation**: See `deploy/` directory
+- **Documentation**: See `deployDocker/` directory
 - **Issues**: Check container logs with `./logs.sh`
 
 ---

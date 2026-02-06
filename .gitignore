@@ -19,6 +19,8 @@ build/
 deploy/backups/
 *.sql
 *.dump
+deploy/backups/
+deployDocker/backups/
 
 # Certificates and keys
 *.pem

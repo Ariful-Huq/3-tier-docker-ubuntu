@@ -91,7 +91,7 @@ cd 3-tier-docker-ubuntu
 ### Step 6: Create .env File
 
 ```bash
-cd ~/3-tier-with-docker/deploy
+cd ~/3-tier-docker-ubuntu/deployDocker
 cp .env.example .env
 nano .env  # or use vim
 ```

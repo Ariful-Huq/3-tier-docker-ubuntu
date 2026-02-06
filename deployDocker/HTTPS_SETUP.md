@@ -145,7 +145,7 @@ aws acm list-certificates --region us-east-1
 Certbot needs port 80 for verification:
 
 ```bash
-cd ~/3-tier-with-docker/deploy
+cd ~/3-tier-docker-ubuntu/deployDocker
 source .env
 docker stop $CONTAINER_FRONTEND
 ```
@@ -196,7 +196,7 @@ docker start $CONTAINER_FRONTEND
 ### Step 10: Run Certificate Export Script
 
 ```bash
-cd ~/3-tier-with-docker/deploy
+cd ~/3-tier-docker-ubuntu/deployDocker
 chmod +x export-cert-to-acm.sh
 sudo ./export-cert-to-acm.sh
 ```
@@ -401,7 +401,7 @@ curl https://bmi.ostaddevops.click/health
 ### Step 20: Create Renewal Script
 
 ```bash
-cd ~/3-tier-with-docker/deploy
+cd ~/3-tier-docker-ubuntu/deployDocker
 nano renew-certificate.sh
 ```
 
@@ -420,7 +420,7 @@ certbot renew --quiet
 docker start frontend-web
 
 # Export to ACM
-/home/ubuntu/3-tier-with-docker/deploy/export-cert-to-acm.sh
+/home/ubuntu/3-tier-docker-ubuntu/deployDocker/export-cert-to-acm.sh
 
 echo "Certificate renewal completed: $(date)"
 ```
@@ -440,7 +440,7 @@ sudo crontab -e
 **Add this line (runs every day at 2 AM):**
 
 ```cron
-0 2 * * * /home/ubuntu/3-tier-with-docker/deploy/renew-certificate.sh >> /var/log/certbot-renewal.log 2>&1
+0 2 * * * /home/ubuntu/3-tier-docker-ubuntu/deployDocker/renew-certificate.sh >> /var/log/certbot-renewal.log 2>&1
 ```
 
 **Note:** Certbot only renews certificates within 30 days of expiry.
@@ -461,7 +461,7 @@ sudo certbot renew --dry-run
 ### Step 23: Update .env File
 
 ```bash
-cd ~/3-tier-with-docker/deploy
+cd ~/3-tier-docker-ubuntu/deployDocker
 nano .env
 ```
 
