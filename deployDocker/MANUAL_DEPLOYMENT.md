@@ -170,7 +170,7 @@ docker run -d \
   --network bmi-health-network \
   -e POSTGRES_DB=bmi_health_db \
   -e POSTGRES_USER=bmi_user \
-  -e POSTGRES_PASSWORD=YOUR_STRONG_PASSWORD_HERE \ # ⚠️ Change this!
+  -e POSTGRES_PASSWORD=YOUR_STRONG_PASSWORD_HERE \
   -v $(pwd)/backend/migrations/001_create_measurements.sql:/docker-entrypoint-initdb.d/001_create_measurements.sql:ro \
   -v $(pwd)/backend/migrations/002_add_measurement_date.sql:/docker-entrypoint-initdb.d/002_add_measurement_date.sql:ro \
   -v postgres-data:/var/lib/postgresql/data \
