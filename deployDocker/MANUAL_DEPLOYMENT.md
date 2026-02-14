@@ -11,7 +11,7 @@ This guide walks you through manually deploying the 3-tier BMI Health Tracker ap
 - **AWS EC2 Instance**: Fresh Ubuntu 22.04 LTS or later
 - **Security Group**: Port 80 (HTTP) open to the internet (0.0.0.0/0)
 - **SSH Access**: Key pair to connect to EC2 instance
-- **Git Repository**: https://github.com/sarowar-alam/3-tier-docker-ubuntu.git
+- **Git Repository**: https://github.com/ariful-huq/3-tier-docker-ubuntu.git
 
 ---
 
