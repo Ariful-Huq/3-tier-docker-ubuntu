@@ -80,7 +80,7 @@ git --version
 
 ```bash
 cd ~
-git clone https://github.com/sarowar-alam/3-tier-docker-ubuntu.git
+git clone https://github.com/ariful-huq/3-tier-docker-ubuntu.git
 cd 3-tier-docker-ubuntu
 ```
 
@@ -105,14 +105,14 @@ POSTGRES_USER=bmi_user
 POSTGRES_PASSWORD=YOUR_STRONG_PASSWORD_HERE  # ⚠️ Change this!
 
 # Backend Database Connection
-DATABASE_URL=postgresql://bmi_user:YOUR_STRONG_PASSWORD_HERE@postgres-db:5432/bmi_health_db
+DATABASE_URL=postgresql://bmi_user:YOUR_STRONG_PASSWORD_HERE@postgres-db:5432/bmi_health_db # ⚠️ Change this!
 
 # Backend Server Configuration
 PORT=3000
 NODE_ENV=production
 
 # CORS Configuration
-FRONTEND_URL=http://<YOUR-EC2-PUBLIC-IP>  # Or use domain name
+FRONTEND_URL=http://<YOUR-EC2-PUBLIC-IP>  # ⚠️ Change this! Or use domain name
 
 # Container Names
 CONTAINER_DB=postgres-db
@@ -170,7 +170,7 @@ docker run -d \
   --network bmi-health-network \
   -e POSTGRES_DB=bmi_health_db \
   -e POSTGRES_USER=bmi_user \
-  -e POSTGRES_PASSWORD=YOUR_STRONG_PASSWORD_HERE \
+  -e POSTGRES_PASSWORD=YOUR_STRONG_PASSWORD_HERE \ # ⚠️ Change this!
   -v $(pwd)/backend/migrations/001_create_measurements.sql:/docker-entrypoint-initdb.d/001_create_measurements.sql:ro \
   -v $(pwd)/backend/migrations/002_add_measurement_date.sql:/docker-entrypoint-initdb.d/002_add_measurement_date.sql:ro \
   -v postgres-data:/var/lib/postgresql/data \
